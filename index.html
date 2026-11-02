@@ -7,16 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --khneu-blue: #002b49;       /* Corporate KhNEU Dark Blue */
-            --khneu-light-blue: #004b87;  /* Accent Blue */
-            --khneu-gold: #ffb703;        /* KhNEU Gold / Yellow accent */
+            --khneu-blue: #002b49;
+            --khneu-light-blue: #004b87;
+            --khneu-gold: #ffb703;
             --bg: #f0f4f8;
             --card-bg: #ffffff;
             --text: #1e293b;
             --text-light: #64748b;
             --danger: #ef4444;
             --success: #22c55e;
-            --warning: #f59e0b;
         }
 
         * {
@@ -35,7 +34,6 @@
             min-height: 100vh;
         }
 
-        /* Header & Navigation */
         header {
             background: var(--khneu-blue);
             color: white;
@@ -56,7 +54,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            letter-spacing: -0.5px;
         }
 
         .logo span {
@@ -90,13 +87,8 @@
             font-size: 0.85rem;
             font-weight: 700;
             cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .badge-admin:hover {
-            transform: scale(1.05);
         }
 
-        /* Main Container & Views */
         .container {
             max-width: 1200px;
             margin: 2rem auto;
@@ -111,15 +103,8 @@
 
         .view.active {
             display: block;
-            animation: fadeIn 0.3s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(0,43,73,0.92), rgba(0,75,135,0.88)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80') center/cover;
             color: white;
@@ -127,25 +112,12 @@
             border-radius: 20px;
             margin-bottom: 2.5rem;
             box-shadow: 0 15px 35px rgba(0,43,73,0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--khneu-gold), #fff);
         }
 
         .hero h1 {
             font-size: 2.8rem;
             margin-bottom: 1rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
         }
 
         .hero p {
@@ -163,7 +135,6 @@
             text-decoration: none;
             font-weight: 700;
             display: inline-block;
-            transition: all 0.3s;
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(255,183,3,0.3);
@@ -171,7 +142,6 @@
 
         .btn:hover {
             background: #ffa200;
-            transform: translateY(-2px);
         }
 
         .btn-outline {
@@ -186,7 +156,6 @@
             color: var(--khneu-blue);
         }
 
-        /* Rich Home Sections */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -205,15 +174,8 @@
         .feature-card h3 {
             color: var(--khneu-blue);
             margin-bottom: 0.75rem;
-            font-size: 1.2rem;
         }
 
-        .feature-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* Photo Gallery Row */
         .photo-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -233,11 +195,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.4s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
         }
 
         .gallery-caption {
@@ -252,7 +209,6 @@
             font-weight: 600;
         }
 
-        /* Stats Row */
         .stats-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -273,10 +229,8 @@
         .stat-label {
             font-size: 0.9rem;
             color: var(--text-light);
-            margin-top: 0.3rem;
         }
 
-        /* Cards & Grids */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -289,34 +243,20 @@
             padding: 2rem;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             border-top: 4px solid var(--khneu-light-blue);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
         .card h3 {
             color: var(--khneu-blue);
             margin-bottom: 0.75rem;
-            font-size: 1.3rem;
-        }
-
-        .card p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
         }
 
         .card-meta {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             font-size: 0.85rem;
             color: var(--text-light);
             margin-bottom: 1rem;
@@ -325,7 +265,6 @@
             border-radius: 8px;
         }
 
-        /* Forms & Panels */
         .panel {
             background: var(--card-bg);
             padding: 2.5rem;
@@ -349,22 +288,15 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            font-size: 0.95rem;
             color: var(--khneu-blue);
         }
 
-        .form-group input, .form-group select, .form-group textarea {
+        .form-group input, .form-group select {
             width: 100%;
             padding: 0.8rem 1rem;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             font-size: 1rem;
-            transition: border-color 0.2s;
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--khneu-light-blue);
         }
 
         .info-box {
@@ -377,7 +309,6 @@
             color: #0369a1;
         }
 
-        /* Tables for Organizer */
         .table-responsive {
             overflow-x: auto;
             background: white;
@@ -395,17 +326,11 @@
         th, td {
             padding: 1rem 1.25rem;
             border-bottom: 1px solid #e2e8f0;
-            font-size: 0.95rem;
         }
 
         th {
             background: #f8fafc;
             color: var(--khneu-blue);
-            font-weight: 700;
-        }
-
-        tr:hover {
-            background: #fdfefe;
         }
 
         .status-badge {
@@ -418,11 +343,6 @@
         .status-pending { background: #fef9c3; color: #ca8a04; }
         .status-approved { background: #dcfce7; color: #16a34a; }
         .status-rejected { background: #fee2e2; color: #dc2626; }
-
-        .action-btns {
-            display: flex;
-            gap: 0.5rem;
-        }
 
         .btn-sm {
             padding: 0.3rem 0.8rem;
@@ -444,14 +364,12 @@
             display: none;
         }
 
-        /* Footer */
         footer {
             background: var(--khneu-blue);
             color: #94a3b8;
             text-align: center;
             padding: 2.5rem;
             margin-top: 3rem;
-            font-size: 0.9rem;
             border-top: 4px solid var(--khneu-gold);
         }
 
@@ -459,13 +377,6 @@
             color: var(--khneu-gold);
             text-decoration: none;
             font-weight: 600;
-        }
-
-        @media(max-width: 768px) {
-            .photo-gallery { grid-template-columns: 1fr; }
-            .stats-row { grid-template-columns: 1fr; gap: 1.5rem; }
-            header { padding: 1rem; flex-direction: column; gap: 1rem; }
-            nav { flex-wrap: wrap; justify-content: center; }
         }
     </style>
 </head>
@@ -485,228 +396,192 @@
     </header>
 
     <div class="container">
-
-        <!-- VIEW: HOME (Rich, styled in KhNEU blue with photos & info) -->
         <div id="view-home" class="view active">
             <div class="hero">
                 <h1>Волонтерський штаб ХНЕУ ім. С. Кузнеця</h1>
-                <p>Офіційна платформа студентських ініціатив, гуманітарної допомоги, екологічних толок та соціальних проєктів нашого університету.</p>
+                <p>Офіційна платформа студентських ініціатив, гуманітарної допомоги та соціальних проєктів університету.</p>
                 <div>
                     <button class="btn" onclick="switchView('register')">Долучитися до штабу</button>
                     <button class="btn btn-outline" onclick="switchView('projects')">Переглянути події</button>
                 </div>
             </div>
 
-            <!-- Stats Row -->
             <div class="stats-row">
                 <div>
                     <div class="stat-num">150+</div>
-                    <div class="stat-label">Активних волонтерів-студентів</div>
+                    <div class="stat-label">Волонтерів-студентів</div>
                 </div>
                 <div>
                     <div class="stat-num">14</div>
-                    <div class="stat-label">Реалізованих ініціатив</div>
+                    <div class="stat-label">Ініціатив</div>
                 </div>
                 <div>
                     <div class="stat-num">20 годин</div>
-                    <div class="stat-label">Максимум балів до блоку</div>
+                    <div class="stat-label">Максимум балів</div>
                 </div>
             </div>
 
-            <!-- Photo Gallery with real KhNEU student volunteering vibes -->
             <h2 style="color: var(--khneu-blue); margin-bottom: 1rem; font-weight: 800;">Життя штабу у фотографіях</h2>
             <div class="photo-gallery">
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=800&q=80" alt="Студенти ХНЕУ">
-                    <div class="gallery-caption">Командні зустрічі та обговорення нових ініціатив</div>
+                    <div class="gallery-caption">Зустрічі та обговорення</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800&q=80" alt="Волонтерська допомога">
-                    <div class="gallery-caption">Сортування та розподіл гуманітарної допомоги</div>
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800&q=80" alt="Допомога">
+                    <div class="gallery-caption">Гуманітарна допомога</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Цифрові проєкти">
-                    <div class="gallery-caption">Розробка цифрових рішень та платформ студентами</div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="IT">
+                    <div class="gallery-caption">Цифрові рішення</div>
                 </div>
             </div>
 
-            <!-- Features Grid -->
             <div class="features-grid">
                 <div class="feature-card">
                     <h3>🎓 Офіційна підтримка ХНЕУ</h3>
-                    <p>Діяльність штабу повністю інтегрована у навчальний процес та покриває години самостійної роботи з блоку «Волонтерський рух».</p>
+                    <p>Діяльність штабу покриває години самостійної роботи з блоку «Волонтерський рух».</p>
                 </div>
                 <div class="feature-card">
-                    <h3>⚡ Швидка реєстрація та облік</h3>
-                    <p>Подавайте заявки на події за кілька кліків, слідкуйте за статусом у реальному часі та отримуйте заслужені бали.</p>
+                    <h3>⚡ Швидкий облік</h3>
+                    <p>Подавайте заявки на події за кілька кліків та отримуйте бали.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🌐 Прямий зв'язок через Telegram</h3>
-                    <p>Зручна координація через інтегровані месенджери та робочі чати університетської спільноти.</p>
+                    <h3>🌐 Зв'язок через Telegram</h3>
+                    <p>Зручна координація через інтегровані месенджери.</p>
                 </div>
             </div>
         </div>
 
-        <!-- VIEW: PROJECTS -->
         <div id="view-projects" class="view">
-            <h2 style="color: var(--khneu-blue); margin-bottom: 0.5rem; font-weight: 800;">Актуальні проєкти та події ХНЕУ</h2>
-            <p style="color: var(--text-light); margin-bottom: 1.5rem;">Обирайте ініціативу, натискайте кнопку участі та приєднуйтесь до команди.</p>
-            
+            <h2 style="color: var(--khneu-blue); margin-bottom: 0.5rem; font-weight: 800;">Актуальні проєкти та події</h2>
             <div class="grid">
                 <div class="card">
                     <div>
-                        <div class="card-meta">
-                            <span>📅 Щосуботи</span>
-                            <span>📍 Студмістечко ХНЕУ</span>
-                        </div>
+                        <div class="card-meta"><span>📅 Щосуботи</span><span>📍 Студмістечко</span></div>
                         <h3>Екологічна толока ХНЕУ</h3>
-                        <p>Прибирання території студмістечка, благоустрій зелених зон та висадка нових дерев.</p>
+                        <p>Прибирання території студмістечка та благоустрій зелених зон.</p>
                     </div>
                     <div>
-                        <div style="font-size: 0.85rem; color: #0369a1; font-weight: 600; margin-bottom: 0.75rem;">Зараховується: 4 години до блоку</div>
+                        <div style="font-size: 0.85rem; color: #0369a1; font-weight: 600; margin-bottom: 0.75rem;">Зараховується: 4 години</div>
                         <button class="btn" style="width:100%;" onclick="participateProject('Екологічна толока ХНЕУ', 4)">Учати в проєкті</button>
                     </div>
                 </div>
-
                 <div class="card">
                     <div>
-                        <div class="card-meta">
-                            <span>📅 Постійно</span>
-                            <span>📍 Онлайн / Корпус №1</span>
-                        </div>
-                        <h3>Цифрова адаптація та допомога ВПО</h3>
-                        <p>Допомога внутрішньо переміщеним особам та студентській молоді в освоєнні освітніх цифрових сервісів.</p>
+                        <div class="card-meta"><span>📅 Постійно</span><span>📍 Онлайн</span></div>
+                        <h3>Цифрова адаптація ВПО</h3>
+                        <p>Допомога в освоєнні освітніх цифрових сервісів та платформ.</p>
                     </div>
                     <div>
                         <div style="font-size: 0.85rem; color: #0369a1; font-weight: 600; margin-bottom: 0.75rem;">Зараховується: до 6 годин</div>
-                        <button class="btn" style="width:100%;" onclick="participateProject('Цифрова адаптація та допомога ВПО', 6)">Учати в проєкті</button>
+                        <button class="btn" style="width:100%;" onclick="participateProject('Цифрова адаптація ВПО', 6)">Учати в проєкті</button>
                     </div>
                 </div>
-
                 <div class="card">
                     <div>
-                        <div class="card-meta">
-                            <span>📅 За графіком</span>
-                            <span>📍 Волонтерський штаб ХНЕУ</span>
-                        </div>
-                        <h3>Гуманітарна допомога та логістика</h3>
-                        <p>Облік, пакування речей першої необхідності та взаємодія з партнерами університету.</p>
+                        <div class="card-meta"><span>📅 За графіком</span><span>📍 Штаб ХНЕУ</span></div>
+                        <h3>Гуманітарна логістика</h3>
+                        <p>Облік та пакування речей першої необхідності.</p>
                     </div>
                     <div>
-                        <div style="font-size: 0.85rem; color: #0369a1; font-weight: 600; margin-bottom: 0.75rem;">Зараховується: від 3 до 8 годин</div>
-                        <button class="btn" style="width:100%;" onclick="participateProject('Гуманітарна допомога та логістика', 5)">Учати в проєкті</button>
+                        <div style="font-size: 0.85rem; color: #0369a1; font-weight: 600; margin-bottom: 0.75rem;">Зараховується: до 8 годин</div>
+                        <button class="btn" style="width:100%;" onclick="participateProject('Гуманітарна логістика', 5)">Учати в проєкті</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- VIEW: REGISTER -->
         <div id="view-register" class="view">
             <div class="panel">
-                <h2>Реєстрація у Волонтерський штаб</h2>
-                
+                <h2>Реєстрація у штаб</h2>
                 <div class="info-box">
-                    <strong>📱 Інтеграція з Telegram:</strong> Введіть свій нік в Telegram (наприклад, <code>@username</code>). Організатори зможуть оперативно зв'язатися з вами для координації завдань!
+                    <strong>📱 Telegram:</strong> Введіть свій нік (наприклад, <code>@username</code>) для зв'язку з організаторами.
                 </div>
-
                 <div class="alert-success" id="reg-success">
-                    ✅ Реєстрацію успішно завершено! Перевірте вкладку «Мої заявки».
+                    ✅ Реєстрацію успішно завершено! Перевірте «Мої заявки».
                 </div>
-
                 <form id="regForm" onsubmit="handleRegistration(event)">
                     <div class="form-group">
-                        <label for="reg-name">ПІБ (повністю)</label>
-                        <input type="text" id="reg-name" required placeholder="Наприклад: Шевченко Василь Петрович">
+                        <label>ПІБ (повністю)</label>
+                        <input type="text" id="reg-name" required placeholder="Шевченко Василь Петрович">
                     </div>
                     <div class="form-group">
-                        <label for="reg-group">Академічна група та спеціальність</label>
-                        <input type="text" id="reg-group" required placeholder="Наприклад: С1 «Економіка», гр. 6.01.CD88.020.25.1">
+                        <label>Група та спеціальність</label>
+                        <input type="text" id="reg-group" required placeholder="С1 «Економіка», гр. 1">
                     </div>
                     <div class="form-group">
-                        <label for="reg-tg">Ваш Telegram (для зв'язку)</label>
+                        <label>Ваш Telegram</label>
                         <input type="text" id="reg-tg" required placeholder="@your_telegram">
                     </div>
                     <div class="form-group">
-                        <label for="reg-direction">Пріоритетний напрямок волонтерства</label>
+                        <label>Напрямок</label>
                         <select id="reg-direction">
                             <option>Гуманітарна допомога та логістика</option>
                             <option>Цифрова підтримка та розробка</option>
                             <option>Медіа та інформаційна підтримка</option>
-                            <option>Організація подій та заходів ХНЕУ</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn" style="width: 100%;">Зареєструватися у системі</button>
+                    <button type="submit" class="btn" style="width: 100%;">Зареєструватися</button>
                 </form>
             </div>
         </div>
 
-        <!-- VIEW: DASHBOARD -->
         <div id="view-dashboard" class="view">
-            <h2 style="color: var(--khneu-blue); margin-bottom: 1rem; font-weight: 800;">Особистий кабінет волонтера</h2>
+            <h2 style="color: var(--khneu-blue); margin-bottom: 1rem; font-weight: 800;">Особистий кабінет</h2>
             <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
                 <div id="user-status-card">
-                    <p style="color: var(--text-light); margin-bottom: 1rem;">Тут ви можете переглянути статус своїх заявок на участь у проєктах.</p>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Тут ви можете переглянути статус своїх заявок.</p>
                 </div>
-                
-                <h3 style="color: var(--khneu-blue); margin-top: 1.5rem; margin-bottom: 1rem;">Мої подані заявки</h3>
+                <h3 style="color: var(--khneu-blue); margin-top: 1.5rem; margin-bottom: 1rem;">Мої заявки</h3>
                 <div class="table-responsive">
                     <table>
                         <thead>
                             <tr>
-                                <th>Подія / Проєкт</th>
-                                <th>Дата подачі</th>
+                                <th>Проєкт</th>
+                                <th>Дата</th>
                                 <th>Telegram</th>
                                 <th>Статус</th>
                             </tr>
                         </thead>
-                        <tbody id="user-applications-list">
-                            <!-- Populated via JS -->
-                        </tbody>
+                        <tbody id="user-applications-list"></tbody>
                     </table>
                 </div>
             </div>
         </div>
 
-        <!-- VIEW: ADMIN PANEL -->
         <div id="view-admin" class="view">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                <h2 style="color: var(--khneu-blue); font-weight: 800;">Панель управління організатора штабу</h2>
-                <span style="background: #e0f2fe; color: #0369a1; padding: 0.4rem 1rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem;">Режим адміністратора</span>
+                <h2 style="color: var(--khneu-blue); font-weight: 800;">Панель організатора</h2>
+                <span style="background: #e0f2fe; color: #0369a1; padding: 0.4rem 1rem; border-radius: 8px; font-weight: 700;">Адмін</span>
             </div>
-            
-            <p style="color: var(--text-light); margin-bottom: 1rem;">Організатори можуть переглядати всі надходячі заявки від студентів, схвалювати або відхиляти їх.</p>
-
             <div class="table-responsive">
                 <table>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>ПІБ студента</th>
-                            <th>Група / Спеціальність</th>
+                            <th>ПІБ</th>
+                            <th>Група</th>
                             <th>Telegram</th>
                             <th>Проєкт</th>
                             <th>Статус</th>
-                            <th>Дії управління</th>
+                            <th>Дії</th>
                         </tr>
                     </thead>
-                    <tbody id="admin-applications-table">
-                        <!-- Populated via JS -->
-                    </tbody>
+                    <tbody id="admin-applications-table"></tbody>
                 </table>
             </div>
         </div>
-
     </div>
 
     <footer>
-        <p>&copy; 2026 Харківський національний економічний університет імені Семена Кузнеця.<br>
-        Волонтерський штаб ХНЕУ. Цифрове рішення розроблено на замовлення штабу | <a href="https://github.com/OffvDKAij" target="_blank">GitHub: OffvDKAij</a></p>
+        <p>&copy; 2026 ХНЕУ ім. С. Кузнеця. Волонтерський штаб.<br>
+        Розробник: <a href="https://github.com/OffvDKAij" target="_blank">GitHub: OffvDKAij</a></p>
     </footer>
 
     <script>
         let applications = JSON.parse(localStorage.getItem('khneu_volunteer_apps')) || [
-            { id: 1, name: 'Іван Петренко', group: 'С1 «Економіка», гр. 1', tg: '@ivan_petrenko', project: 'Екологічна толока ХНЕУ', date: '03.11.2026', status: 'approved' },
-            { id: 2, name: 'Марія Коваленко', group: 'МП «Маркетинг», гр. 2', tg: '@maria_kov', project: 'Цифрова адаптація та допомога ВПО', date: '03.11.2026', status: 'pending' }
+            { id: 1, name: 'Іван Петренко', group: 'С1 «Економіка»', tg: '@ivan_petrenko', project: 'Екологічна толока ХНЕУ (4 год)', date: '03.11.2026', status: 'approved' }
         ];
 
         let currentUser = JSON.parse(localStorage.getItem('khneu_current_user')) || null;
@@ -739,7 +614,7 @@
                 name: name,
                 group: group,
                 tg: tg,
-                project: 'Реєстрація у штаб (' + direction + ')',
+                project: 'Реєстрація (' + direction + ')',
                 date: new Date().toLocaleDateString(),
                 status: 'pending'
             });
@@ -770,7 +645,7 @@
                 status: 'pending'
             });
             saveApps();
-            alert('Заявку на участь у проєкті «' + projectName + '» успішно надіслано!');
+            alert('Заявку успішно надіслано!');
             switchView('dashboard');
         }
 
@@ -783,7 +658,7 @@
             const statusCard = document.getElementById('user-status-card');
             
             if (!currentUser) {
-                statusCard.innerHTML = '<p style="color: var(--danger);">Ви ще не зареєстровані в системі. Будь ласка, <a onclick="switchView('register')" style="color: #0369a1; cursor:pointer; font-weight:600;">зареєструйтеся</a>.</p>';
+                statusCard.innerHTML = '<p style="color: var(--danger);">Ви ще не зареєстровані. <a onclick="switchView(\'register\')" style="color: #0369a1; cursor:pointer; font-weight:600;">Зареєструватися</a>.</p>';
                 container.innerHTML = '<tr><td colspan="4" style="text-align:center; color: var(--text-light);">Немає даних</td></tr>';
                 return;
             }
@@ -802,7 +677,7 @@
             const userApps = applications.filter(app => app.tg === currentUser.tg || app.name === currentUser.name);
             
             if (userApps.length === 0) {
-                container.innerHTML = '<tr><td colspan="4" style="text-align:center; color: var(--text-light);">Ви ще не подавали заявок.</td></tr>';
+                container.innerHTML = '<tr><td colspan="4" style="text-align:center; color: var(--text-light);">Немає заявок.</td></tr>';
                 return;
             }
 
@@ -818,9 +693,8 @@
 
         function renderAdminTable() {
             const tbody = document.getElementById('admin-applications-table');
-            
             if (applications.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; color: var(--text-light);">Немає вхідних заявок</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; color: var(--text-light);">Немає заявок</td></tr>';
                 return;
             }
 
@@ -833,7 +707,7 @@
                     <td>${app.project}</td>
                     <td><span class="status-badge status-${app.status}">${getStatusText(app.status)}</span></td>
                     <td>
-                        <div class="action-btns">
+                        <div style="display:flex; gap:0.5rem;">
                             <button class="btn-sm btn-success" onclick="updateStatus(${app.id}, 'approved')">Схвалити</button>
                             <button class="btn-sm btn-danger" onclick="updateStatus(${app.id}, 'rejected')">Відхилити</button>
                         </div>
@@ -861,7 +735,7 @@
             localStorage.removeItem('khneu_current_user');
             currentUser = null;
             renderDashboard();
-            alert('Ви вийшли з профілю.');
+            alert('Ви вийшли.');
         }
     </script>
 </body>
